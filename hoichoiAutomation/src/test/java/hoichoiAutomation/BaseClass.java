@@ -12,7 +12,8 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 public class BaseClass {
-public AndroidDriver<MobileElement> driver = null;
+    
+	public AndroidDriver<MobileElement> driver = null;
 	
 	@BeforeClass
 	public void setUp() {
@@ -24,12 +25,12 @@ public AndroidDriver<MobileElement> driver = null;
 		dcap.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
 		dcap.setCapability("platformName", "android");
 		dcap.setCapability("platformVersion", "8.1.0");
+		dcap.setCapability("automationName", "UiAutomator2");
 		dcap.setCapability("appPackage", "com.viewlift.hoichoi");
 		dcap.setCapability("appActivity", "com.viewlift.hoichoi.framework.presentation.splash.SplashActivity");
-		dcap.setCapability("autoLaunch", true);
+		dcap.setCapability("autoLaunch", false);
 		dcap.setCapability("eventTimings", true);
 		dcap.setCapability("clearDeviceLogsOnStart", true);
-		
 		
 		try {
 			URL url = new URL("http://localhost:4723/wd/hub");
