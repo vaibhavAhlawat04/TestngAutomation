@@ -37,5 +37,6 @@
 	<classpathentry kind="lib" path="/home/vaibhav/Downloads/poi-ooxml-3.17.jar"/>
 	<classpathentry kind="lib" path="/home/vaibhav/Downloads/poi-3.17.jar"/>
 	<classpathentry kind="lib" path="/home/vaibhav/Downloads/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="/home/vaibhav/Downloads/ExcelReportGenerator-4.0.1.jar"/>
 	<classpathentry kind="output" path="bin/default"/>
 </classpath>

@@ -1,5 +1,6 @@
 package hoichoiAutomation;
 
+import org.testng.annotations.Test;
 import java.io.File;
 import java.time.Duration;
 import org.apache.commons.io.FileUtils;

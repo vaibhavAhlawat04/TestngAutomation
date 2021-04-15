@@ -1,11 +1,19 @@
 package hoichoiAutomation;
 
+import org.testng.annotations.Test;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Stream;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.android.Activity;
+import io.appium.java_client.serverevents.CommandEvent;
+import io.appium.java_client.serverevents.ServerEvents;
 
 public class HomePage extends BaseClass{
 
@@ -35,6 +43,9 @@ public class HomePage extends BaseClass{
 		driver.findElementByXPath("//android.view.View[@content-desc=\"Free, #Free#\"]").click();
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.widget.ImageView[3]")));
 
+		
+		
+		
 		driver.findElement(By.xpath("//*[@text='Genre']")).click();
 		/*
 		List<MobileElement> genreList = driver.findElementsByClassName("android.view.View");

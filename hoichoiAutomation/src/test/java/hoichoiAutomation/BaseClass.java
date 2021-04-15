@@ -1,5 +1,6 @@
 package hoichoiAutomation;
 
+import org.testng.annotations.BeforeMethod;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -15,6 +16,7 @@ public class BaseClass {
     
 	public AndroidDriver<MobileElement> driver = null;
 	
+	@BeforeMethod
 	@BeforeClass
 	public void setUp() {
 		DesiredCapabilities dcap = new DesiredCapabilities();

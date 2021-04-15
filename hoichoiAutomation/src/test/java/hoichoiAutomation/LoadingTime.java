@@ -1,5 +1,6 @@
 package hoichoiAutomation;
 
+import org.testng.annotations.Test;
 import java.util.List;
 import java.util.Optional;
 import org.openqa.selenium.By;
@@ -50,6 +51,8 @@ public class LoadingTime extends BaseClass {
 			
 			System.out.println("\n The app took total <" + (launchMs/1000.0) + "s to launch" +
 			" and total <" + (interactMs/1000.0) + "s to become interactable");
+			
+			
 			
 	
 		}catch(Exception ee) {

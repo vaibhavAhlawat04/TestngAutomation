@@ -1,10 +1,9 @@
 package hoichoiAutomation;
 
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.Test;
-
 import io.appium.java_client.android.Activity;
 
 public class Subscription extends BaseClass{
@@ -18,6 +17,7 @@ public class Subscription extends BaseClass{
 	public void subTest() throws InterruptedException {
 		
 		WebDriverWait wait = new WebDriverWait(driver,120);
+		System.out.println("Starting Sub Test");
 		
 		Activity act = new Activity("com.viewlift.hoichoi","com.viewlift.hoichoi.framework.presentation.splash.SplashActivity");
 		driver.startActivity(act);

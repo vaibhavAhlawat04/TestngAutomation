@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="hoichoiAutomation.LoginTest">
+        <methods>
+          <include name="loginTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- hoichoiAutomation.LoginTest -->
+      <class name="hoichoiAutomation.Subscription">
+        <methods>
+          <include name="subTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- hoichoiAutomation.Subscription -->
+      <class name="hoichoiAutomation.DiscoveredPage">
+        <methods>
+          <include name="DiscoveredPageTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- hoichoiAutomation.DiscoveredPage -->
+      <class name="hoichoiAutomation.ScreenShot">
+        <methods>
+          <include name="ScreenShots"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- hoichoiAutomation.ScreenShot -->
+      <class name="hoichoiAutomation.LoadingTime">
+        <methods>
+          <include name="setUp"/>
+          <include name="LoadingTest"/>
+        </methods>
+      </class> <!-- hoichoiAutomation.LoadingTime -->
+      <class name="hoichoiAutomation.MatchGenres">
+        <methods>
+          <include name="GenresTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- hoichoiAutomation.MatchGenres -->
+      <class name="hoichoiAutomation.HomePage">
+        <methods>
+          <include name="HomePageTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- hoichoiAutomation.HomePage -->
+      <class name="hoichoiAutomation.CheckButtons">
+        <methods>
+          <include name="ButtonTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- hoichoiAutomation.CheckButtons -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

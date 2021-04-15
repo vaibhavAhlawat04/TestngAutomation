@@ -1,5 +1,6 @@
 package hoichoiAutomation;
 
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -16,7 +17,7 @@ public class CheckButtons extends BaseClass {
 	}
 	
 	@Test
-	public void ButtonTest() {
+	public void ButtonTest() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver,120);
 		
 		Activity act = new Activity("com.viewlift.hoichoi","com.viewlift.hoichoi.framework.presentation.splash.SplashActivity");
@@ -24,7 +25,7 @@ public class CheckButtons extends BaseClass {
 		driver.startActivity(act);
 		
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.widget.ImageView[3]")));
-		
+		Thread.sleep(2000);
 		
 		System.out.println("Testing Downloads Tab...");
 		driver.findElementByXPath("//*[@text='Downloads']").click();
@@ -47,11 +48,8 @@ public class CheckButtons extends BaseClass {
 		
 		driver.findElementByXPath("//android.view.View[@content-desc=\"Account\"]").click();
 		driver.findElementByXPath("//android.view.View[@content-desc=\"About Hoichoi\"]").click();
-		driver.findElementByAccessibilityId("Close tab").click();
+		driver.findElementByAccessibilityId("Close web view").click();
 		driver.findElementByXPath("//android.view.View[@content-desc=\"FAQ\"]").click();
-		driver.navigate().back();
-		
-		
-		
+		driver.findElementByAccessibilityId("Navigate up").click();	
 	}
 }

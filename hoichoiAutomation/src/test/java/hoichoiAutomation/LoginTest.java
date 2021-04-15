@@ -1,12 +1,14 @@
-package dataDriven;
+package hoichoiAutomation;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import hoichoiAutomation.BaseClass;
+import dataDriven.ReadData;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.Activity;
 
@@ -20,7 +22,7 @@ public class LoginTest extends BaseClass {
 	 * @AfterTest public void End() { driver.quit(); }
 	 */
 	@Test
-	public void loginTest() {
+	public void loginTest() throws InterruptedException {
 		System.out.println("LoginTest begins...");
 		WebDriverWait wait = new WebDriverWait(driver,0);
 
@@ -30,6 +32,14 @@ public class LoginTest extends BaseClass {
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Welcome to Hoichoi']")));
 		
 		driver.findElement(By.xpath("//*[@text='Login']")).click();
+		
+		try{
+			driver.findElement(By.id("com.google.android.gms:id/cancel")).click();
+		}catch(Exception ex) {
+			
+		}
+		
+		
 	    MobileElement els5 = driver.findElementByClassName("android.widget.EditText");
 		
 		try {
@@ -44,6 +54,7 @@ public class LoginTest extends BaseClass {
 				els5.clear();
 				els5.sendKeys(number);
 				driver.findElement(By.xpath("//*[@text='Continue']")).click();	
+				Thread.sleep(5000);
 			}
 			
 		} catch (IOException e) {
