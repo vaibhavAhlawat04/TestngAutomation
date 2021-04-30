@@ -1,5 +1,6 @@
 package hoichoiAutomation;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,7 +9,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import io.appium.java_client.android.Activity;import net.bytebuddy.asm.Advice.OffsetMapping.Target.AbstractReadOnlyAdapter;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.Activity;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
 
 public class Downloads extends BaseClass {
 	public static void main(String[] args) {
@@ -36,17 +40,29 @@ public class Downloads extends BaseClass {
 		
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.widget.ImageView[3]")));
 		
+		scroll();
 		
 		driver.findElementByXPath("//android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View[1]").click();
 		
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.view.ViewGroup/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[1]")));
+		//System.out.println(driver.findElement(By.xpath("//android.view.ViewGroup/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[1]")).getText());
+		
 		List<String> DownloadList = new ArrayList<>();
-		String StreamName = driver.findElementByXPath("//android.view.View/android.view.View/android.widget.ScrollView/android.view.View[1]").getText();
+		String StreamName = driver.findElementByXPath("//android.view.ViewGroup/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[1]").getText();
 		DownloadList.add(StreamName);
 		driver.findElementByAccessibilityId("Download").click();
 		
 		System.out.println("List is " + DownloadList);
 		
 		
+	}
+	public void scroll(){
+		TouchAction action = new TouchAction(driver);
+		action.press(PointOption.point(588,1418))
+		.waitAction(new WaitOptions().withDuration(Duration.ofMillis(3000)))
+		.moveTo(PointOption.point(588,742))
+		.release()
+		.perform();
 	}
 
 }

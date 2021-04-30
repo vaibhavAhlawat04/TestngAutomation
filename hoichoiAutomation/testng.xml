@@ -3,14 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="hoichoiAutomation.LoginTest"/>
-      <class name="hoichoiAutomation.LoadingTime"/>
-      <class name="hoichoiAutomation.HomePage"/>
-      <class name="hoichoiAutomation.MatchGenres"/>
-      <class name="hoichoiAutomation.ScreenShot"/>
-      <class name="hoichoiAutomation.CheckButtons"/>
-      <class name="hoichoiAutomation.DiscoveredPage"/>
-      <class name="hoichoiAutomation.Subscription"/>
+      <class name="GenericTests.MainClass"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

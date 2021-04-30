@@ -3,18 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="hoichoiAutomation.LoginTest">
+      <class name="GenericTests.MainClass">
         <methods>
-          <include name="loginTest"/>
-          <include name="setUp"/>
+          <include name="LaunchApp"/>
+          <include name="setup"/>
+          <include name="LaunchTime"/>
         </methods>
-      </class> <!-- hoichoiAutomation.LoginTest -->
-      <class name="hoichoiAutomation.CheckButtons">
-        <methods>
-          <include name="ButtonTest"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- hoichoiAutomation.CheckButtons -->
+      </class> <!-- GenericTests.MainClass -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

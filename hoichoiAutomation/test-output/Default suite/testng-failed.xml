@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="hoichoiAutomation.DescriptionPage">
+      <class name="hoichoiAutomation.HomePageModules">
         <methods>
-          <include name="Description_Page"/>
+          <include name="Home_modules"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- hoichoiAutomation.DescriptionPage -->
+      </class> <!-- hoichoiAutomation.HomePageModules -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

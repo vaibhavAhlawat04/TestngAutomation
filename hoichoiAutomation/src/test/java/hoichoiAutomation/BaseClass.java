@@ -41,7 +41,7 @@ public class BaseClass {
 			malUrl.printStackTrace();
 		}
 		
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
 	}//setUp
 	
